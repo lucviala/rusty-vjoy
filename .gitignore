@@ -3,3 +3,5 @@ stdafx.hpp
 vjoyinterface.hpp
 vJoyInterface.lib
 wrapper.hpp
+*.lock
+target/

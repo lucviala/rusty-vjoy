@@ -54,6 +54,7 @@ pub enum VjdStat {
     VjdStatUnknown = 4,
 }
 
+#[link(name = "vJoyInterface")]
 extern "C" {
     pub fn GetvJoyVersion() -> SHORT;
 
