@@ -11,6 +11,7 @@ fn main() {
     //https://rust-lang.github.io/rust-bindgen
     let bindings = bindgen::Builder::default()
         .header("wrapper.h")
+        .clang_args(&["-x", "c++"])
         //
         .allowlist_function("GetvJoyVersion")
         .allowlist_function("vJoyEnabled")
@@ -42,10 +43,10 @@ fn main() {
         .allowlist_function("ResetButtons")
         .allowlist_function("ResetPovs")
         //
-        .allowlist_function("SetAxis")
-        .allowlist_function("SetBtn")
-        .allowlist_function("SetDiscPov")
-        .allowlist_function("SetContPov")
+        // .allowlist_function("SetAxis")
+        // .allowlist_function("SetBtn")
+        // .allowlist_function("SetDiscPov")
+        // .allowlist_function("SetContPov")
         //
         //.whitelist_var("DEVICENAME_STRING")
         //.whitelist_var("NTDEVICE_NAME_STRING")
@@ -66,11 +67,11 @@ fn main() {
         //.whitelist_var("HID_ID_.*")
         //
         //.allowlist_type("HID_DEVICE_ATTRIBUTES")
-        .allowlist_type("JOYSTICK_POSITION")
-        .allowlist_type("JOYSTICK_POSITION_V2")
-        .allowlist_type("DEVCTRLS")
-        .allowlist_type("DeviceStat")
-        .allowlist_type("DEV_INFO")
+        // .allowlist_type("JOYSTICK_POSITION")
+        // .allowlist_type("JOYSTICK_POSITION_V2")
+        // .allowlist_type("DEVCTRLS")
+        // .allowlist_type("DeviceStat")
+        // .allowlist_type("DEV_INFO")
         //
         .rustified_enum("VjdStat")
         //
